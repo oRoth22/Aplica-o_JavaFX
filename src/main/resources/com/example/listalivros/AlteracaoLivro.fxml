@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.listalivros.Controllers.AlteracaoLivroController">
+   <children>
+      <Label layoutX="297.0" layoutY="14.0" prefHeight="78.0" prefWidth="232.0" text="Editar Livros" textFill="WHITE">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="56.0" layoutY="104.0" prefHeight="415.0" prefWidth="688.0" style="-fx-background-color: #b7d5e5; -fx-border-radius: 20px;">
+         <children>
+            <Label layoutX="62.0" layoutY="115.0" prefHeight="34.0" prefWidth="74.0" text="Autor:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="66.0" text="Nome: ">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="179.0" prefHeight="34.0" prefWidth="173.0" text="Data Publicação:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="236.0" prefHeight="34.0" prefWidth="83.0" text="Editora:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSalvar" onAction="#handleEditarLivro" layoutX="166.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px;" text="Salvar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="setNome" layoutX="144.0" layoutY="70.0" prefHeight="26.0" prefWidth="434.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent black transparent; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="setAutor" layoutX="136.0" layoutY="119.0" prefHeight="26.0" prefWidth="434.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent black transparent; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="setDatePub" layoutX="231.0" layoutY="179.0" prefHeight="26.0" prefWidth="345.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent black transparent; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="setEditora" layoutX="144.0" layoutY="236.0" prefHeight="26.0" prefWidth="434.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent black transparent; -fx-border-width: 0 0 1 0;" />
+            <Button fx:id="btnExcluir" layoutX="361.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleExcluirLivro" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px;" text="Excluir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnVoltar" layoutX="56.0" layoutY="47.0" mnemonicParsing="false" onAction="#fecharJanelaEdicao" style="-fx-background-color: trasparent; -fx-border-color: #ffff; -fx-background-radius: 10px; -fx-border-width: 2px;" text="Voltar" textFill="WHITE" />
+   </children>
+</AnchorPane>
