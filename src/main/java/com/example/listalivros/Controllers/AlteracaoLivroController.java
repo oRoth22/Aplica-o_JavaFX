@@ -18,7 +18,8 @@ import java.util.Optional;
 public class AlteracaoLivroController {
 
     @FXML
-    private Button btnExcluir;
+    private Button btnVoltar;
+
     @FXML
     private Button btnSalvar;
 
@@ -33,6 +34,13 @@ public class AlteracaoLivroController {
 
     @FXML
     private TextField setNome;
+
+    @FXML
+    void voltarParaHome() {
+        Stage stage = (Stage) btnVoltar.getScene().getWindow();
+        stage.close();
+        homeController.mostrarTelaHome();  // Adicione este método ao HomeController
+    }
 
     private Livro livro;
     private HomeController homeController;

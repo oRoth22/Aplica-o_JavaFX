@@ -18,9 +18,9 @@
                 <TableColumn fx:id="editoraColumn" prefWidth="144.79998779296875" text="Editora" />
             </columns>
         </TableView>
-        <ImageView fitHeight="185.0" fitWidth="249.0" layoutX="556.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="185.0" fx:id="livroImageView" fitWidth="249.0" layoutX="556.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/com/example/listalivros/img/livro%20capa.png" />
+                <Image url="@img/livroCapa.png" />
             </image>
         </ImageView>
         <AnchorPane prefHeight="39.0" prefWidth="800.0" style="-fx-background-color: #b7d5e5;">

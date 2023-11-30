@@ -51,6 +51,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="btnVoltar" layoutX="56.0" layoutY="47.0" mnemonicParsing="false" onAction="#fecharJanelaEdicao" style="-fx-background-color: trasparent; -fx-border-color: #ffff; -fx-background-radius: 10px; -fx-border-width: 2px;" text="Voltar" textFill="WHITE" />
+      <Button fx:id="btnVoltar" layoutX="56.0" layoutY="47.0" mnemonicParsing="false" onAction="#voltarParaHome" style="-fx-background-color: trasparent; -fx-border-color: #ffff; -fx-background-radius: 10px; -fx-border-width: 2px;" text="Voltar" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
@@ -31,8 +33,16 @@ public class LoginController {
     private String email;
 
     @FXML
+    private ImageView livroImageView;
+
+    @FXML
     void efetuarCadastro() {
         abrirTelaCadastro();
+    }
+
+    public void initialize() {
+        Image livroImage = new Image(getClass().getResource("/com/example/listalivros/img/livroCapa.png").toExternalForm());
+        livroImageView.setImage(livroImage);
     }
 
     @FXML

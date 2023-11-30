@@ -4,6 +4,7 @@ import com.example.listalivros.Controllers.Livro;
 import com.example.listalivros.Model.HomeModel;
 import com.example.listalivros.app;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -115,8 +116,7 @@ public class HomeController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(app.class.getResource("AlteracaoLivro.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = (Stage) new Stage();
-            //Stage stage = (Stage) tableData.getScene().getWindow();
+            Stage stage = new Stage();
             stage.setTitle("Editar Livro");
             stage.setScene(scene);
 
@@ -127,6 +127,10 @@ public class HomeController {
             // Set a instância de HomeController na AlteracaoLivroController
             alteracaoLivroController.setHomeController(this);
 
+            // Fechar a janela atual (HomeController)
+            Stage homeStage = (Stage) tableData.getScene().getWindow();
+            homeStage.close();
+
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -134,8 +138,47 @@ public class HomeController {
         }
     }
 
+    private void abrirTelaHome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(app.class.getResource("Home.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(scene);
+
+            // Fechar a janela atual (AlteracaoLivroController)
+            Stage alteracaoLivroStage = (Stage) tableData.getScene().getWindow();
+            alteracaoLivroStage.close();
+
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Trate o erro adequadamente
+        }
+    }
+
+    public void mostrarTelaHome() {
+        // Lógica para mostrar a tela inicial (Home)
+        // Por exemplo, você pode carregar o FXML e exibir a cena
+
+        // Exemplo:
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Home.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Home");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Trate o erro adequadamente
+        }
+    }
+
+
     public void atualizarTabela() {
         tableData.refresh();
+        abrirTelaHome();
     }
 
     private void mostrarAlerta(String titulo, String mensagem) {

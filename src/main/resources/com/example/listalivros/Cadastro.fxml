@@ -38,11 +38,12 @@
                   <Font size="14.0" />
                </font>
             </TextField>
+            <Button fx:id="btnVoltar" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarLogin" style="-fx-background-color: transparent; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px;" text="Voltar" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="196.0" fitWidth="267.0" layoutX="504.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="196.0" fx:id="livroImageView" fitWidth="267.0" layoutX="504.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/com/example/listalivros/img/livro%20capa.png" />
+            <Image url="@img/livroCapa.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="504.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horizonte de Histórias" textAlignment="CENTER" wrappingWidth="266.9813232421875">
